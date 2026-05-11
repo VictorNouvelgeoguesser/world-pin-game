@@ -1,8 +1,9 @@
 // Coordonnées de secours si le fichier JSON ne charge pas
 const backupRounds = [
-    { "lat": 48.8584, "lng": 2.2945 },
-    { "lat": 40.6892, "lng": -74.0445 },
-    { "lat": 35.6586, "lng": 139.7454 }
+    { "lat": 48.87812, "lng": 2.31131 },
+    { "lat": 30.81657, "lng": 110.99619 },
+    { "lat": 49.53657, "lng": -1.88234 },
+    { "lat": 48.61850, "lng": -2.02386 },
 ];
 
 let map;
