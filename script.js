@@ -12,7 +12,12 @@ let timer = 60, timerInterval, hasValidated = false;
 
 window.addEventListener('load', function() {
     initMap();
-    startRound();
+    // Do NOT start the round yet
+});
+
+document.getElementById("playButton").addEventListener("click", function() {
+    document.getElementById("startScreen").style.display = "none";
+    startRound(); // Timer starts only now
 });
 
 function initMap() {
