@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>World Pin Game</title>
-    <!-- On charge le CSS de la carte en premier -->
+    <title>World Pin Game - GeoGuessr Edition</title>
+    <!-- Chargement de Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* On rajoute ça pour être sûr que la carte a une taille */
-        #map { width: 100%; height: calc(100vh - 140px); background: #242f3e; }
-    </style>
 </head>
 <body>
 
     <div id="gameUI">
+        <!-- Barre de statistiques -->
         <div id="topBar">
             <div>Round : <span id="roundInfo">1 / 10</span></div>
             <div>Score : <span id="score">0</span></div>
             <div>Temps : <span id="timer">60s</span></div>
         </div>
 
+        <!-- Zone de la Photo -->
+        <div id="imageContainer">
+            <img id="locationPhoto" src="" alt="Où est-ce ?">
+        </div>
+
+        <!-- Zone de la Carte -->
         <div id="map"></div>
 
+        <!-- Barre de contrôle (Valider / Suivant) -->
         <div id="bottomBar">
-            <button id="validateButton" disabled>Valider</button>
+            <button id="validateButton" disabled>Valider ma réponse</button>
             <button id="nextRoundButton" class="hidden">Round suivant</button>
         </div>
 
+        <!-- Fenêtre de résultats flottante -->
         <div id="resultBox" class="hidden"></div>
     </div>
 
-    <!-- IMPORTANT : Charger Leaflet AVANT script.js -->
+    <!-- Scripts : Leaflet d'abord, puis ton script -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>
