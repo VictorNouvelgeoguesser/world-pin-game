@@ -95,7 +95,7 @@ function validateGuess() {
         else if (dist < 100) { pts = 40; }
         else if (dist < 500) { pts = 30; }   
         else if (dist < 1500) { pts = 15; }
-        else if (dist < 4000) { pts = 5; }
+        else if (dist < 3000) { pts = 5; }
         else { pts = 0; }
         
         totalScore += pts;
@@ -128,6 +128,6 @@ document.getElementById("nextRoundButton").addEventListener("click", function() 
             `<h2>Game Over!</h2>
              <p>Your Final Score:</p>
              <h1 style="color:#3b82f6">${totalScore}</h1>
-             <p style="font-size: 14px; margin-top:20px;">Refresh the page to play again.</p>`;
+             <p style="font-size: 14px; margin-top:20px;">Well Done.</p>`;
     }
 });
