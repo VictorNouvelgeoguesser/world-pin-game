@@ -1,8 +1,8 @@
 const roundsData = [
-    { "lat": 48.8584, "lng": 2.2945, "image": "assets/photo1.jpg" }, 
+    { "lat": 48.8584, "lng": 2.2945, "image": "assets/photo1.jpeg" }, 
     { "lat": 40.6892, "lng": -74.0445, "image": "assets/photo2.jpg" }, 
     { "lat": 35.6586, "lng": 139.7454, "image": "assets/photo3.jpg" }, 
-    { "lat": -22.9519, "lng": -43.2105, "image": "assets/photo4.jpg" }, 
+    { "lat": -22.9519, "lng": -43.2105, "image": "assets/photo4.webp" }, 
     { "lat": 27.1751, "lng": 78.0421, "image": "assets/photo5.jpg" }
 ];
 
