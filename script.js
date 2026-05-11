@@ -86,9 +86,10 @@ function validateGuess() {
         
         // --- NOUVEAUX PALIERS DE SCORE ---
         let pts = 0;
-        if (dist < 100) { pts = 50; }
-        else if (dist < 500) { pts = 30; }
-        else if (dist < 2000) { pts = 15; }
+        if (dist < 50) { pts = 50; }
+        else if (dist < 100) { pts = 40; }
+        else if (dist < 500) { pts = 30; }   
+        else if (dist < 1500) { pts = 15; }
         else if (dist < 4000) { pts = 5; }
         else { pts = 0; }
         
