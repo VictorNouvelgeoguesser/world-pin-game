@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111827;
+  color: white;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+#startScreen {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #1f2937, #111827);
+}
+
+.start-box {
+  background: rgba(255,255,255,0.05);
+
+  padding: 40px;
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 320px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+}
+
+.start-box h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.start-box input {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+.start-box button {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+
+  background: #3b82f6;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.start-box button:hover {
+  background: #2563eb;
+}
+
+#topBar {
+  height: 70px;
+
+  background: #1f2937;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-size: 18px;
+}
+
+#map {
+  width: 100vw;
+  height: calc(100vh - 140px);
+
+  cursor: url('./assets/pin.png'), auto;
+}
+
+#bottomBar {
+  height: 70px;
+
+  background: #1f2937;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#validateButton,
+#nextRoundButton {
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #10b981;
+  color: white;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#validateButton:hover,
+#nextRoundButton:hover {
+  background: #059669;
+}
+
+#validateButton:disabled {
+  background: gray;
+  cursor: not-allowed;
+}
+
+#resultBox {
+  position: absolute;
+
+  top: 100px;
+  right: 20px;
+
+  background: rgba(0,0,0,0.8);
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  z-index: 1000;
+
+  width: 250px;
+}
