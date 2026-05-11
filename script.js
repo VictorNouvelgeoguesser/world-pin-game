@@ -1,9 +1,9 @@
 const roundsData = [
     { "lat": 48.8780, "lng": 2.3113, "image": "assets/photo1.jpeg" }, 
-    { "lat": 51.4937, "lng": -0.1469, "image": "assets/photo2.jpg" }, 
-    { "lat": 35.6586, "lng": 139.7454, "image": "assets/photo3.jpg" }, 
-    { "lat": -22.9519, "lng": -43.2105, "image": "assets/photo4.webp" }, 
-    { "lat": 27.1751, "lng": 78.0421, "image": "assets/photo5.jpg" }
+    { "lat": 51.4937, "lng": -0.1469, "image": "assets/photo2.jpeg" }, 
+    { "lat": 49.3211, "lng": 1.5254, "image": "assets/photo3.jpg" }, 
+    { "lat": 48.6182, "lng": -2.0245, "image": "assets/photo4.jpeg" }, 
+    { "lat": 30.8235, "lng": 111.0025, "image": "assets/photo5.jpeg" }
 ];
 
 let map, currentRound = 0, totalScore = 0;
