@@ -120,10 +120,14 @@ document.getElementById("nextRoundButton").addEventListener("click", function() 
     if (currentRound < roundsData.length) {
         map.setView([20, 0], 2);
         startRound();
-    } else {
+        } else {
+        // Clear UI and show final score only
+        document.getElementById("nextRoundButton").remove(); 
+        document.getElementById("validateButton").remove();
         document.getElementById("resultBox").innerHTML = 
-            `<h2>Fini !</h2><p>Score Total : <strong>${totalScore} pts</strong></p>
-             <button onclick="location.reload()" style="margin-top:15px; background:#3b82f6; color:white; padding:10px;">Rejouer</button>`;
-        document.getElementById("nextRoundButton").classList.add("hidden");
+            `<h2>Game Over!</h2>
+             <p>Your Final Score:</p>
+             <h1 style="color:#3b82f6">${totalScore}</h1>
+             <p style="font-size: 14px; margin-top:20px;">Refresh the page to play again.</p>`;
     }
 });
