@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>World Pin Game</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet/dist/leaflet.css"
+  />
+</head>
+
+<body>
+
+  <div id="startScreen">
+    <div class="start-box">
+      <h1>World Pin Game</h1>
+
+      <input
+        type="text"
+        id="teamNameInput"
+        placeholder="Nom d'équipe"
+      />
+
+      <button id="startButton">Commencer</button>
+    </div>
+  </div>
+
+  <div id="gameUI" class="hidden">
+
+    <div id="topBar">
+
+      <div>
+        <strong>Equipe :</strong>
+        <span id="teamName"></span>
+      </div>
+
+      <div>
+        <strong>Round :</strong>
+        <span id="roundInfo"></span>
+      </div>
+
+      <div>
+        <strong>Score :</strong>
+        <span id="score"></span>
+      </div>
+
+      <div>
+        <strong>Temps :</strong>
+        <span id="timer"></span>
+      </div>
+
+    </div>
+
+    <div id="map"></div>
+
+    <div id="bottomBar">
+
+      <button id="validateButton" disabled>
+        Valider
+      </button>
+
+      <button id="nextRoundButton" class="hidden">
+        Round suivant
+      </button>
+
+    </div>
+
+    <div id="resultBox" class="hidden"></div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
