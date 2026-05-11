@@ -1,42 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>World Pin Game</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Pin Game</title>
+    <!-- On charge le CSS de la carte en premier -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* On rajoute ça pour être sûr que la carte a une taille */
+        #map { width: 100%; height: calc(100vh - 140px); background: #242f3e; }
+    </style>
 </head>
-
 <body>
 
-  <div id="gameUI">
-    <div id="topBar">
-      <div>
-        <strong>Round :</strong>
-        <span id="roundInfo"></span>
-      </div>
-      <div>
-        <strong>Score :</strong>
-        <span id="score"></span>
-      </div>
-      <div>
-        <strong>Temps :</strong>
-        <span id="timer"></span>
-      </div>
+    <div id="gameUI">
+        <div id="topBar">
+            <div>Round : <span id="roundInfo">1 / 10</span></div>
+            <div>Score : <span id="score">0</span></div>
+            <div>Temps : <span id="timer">60s</span></div>
+        </div>
+
+        <div id="map"></div>
+
+        <div id="bottomBar">
+            <button id="validateButton" disabled>Valider</button>
+            <button id="nextRoundButton" class="hidden">Round suivant</button>
+        </div>
+
+        <div id="resultBox" class="hidden"></div>
     </div>
 
-    <div id="map"></div>
-
-    <div id="bottomBar">
-      <button id="validateButton" disabled>Valider</button>
-      <button id="nextRoundButton" class="hidden">Round suivant</button>
-    </div>
-
-    <div id="resultBox" class="hidden"></div>
-  </div>
-
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script.js"></script>
+    <!-- IMPORTANT : Charger Leaflet AVANT script.js -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
