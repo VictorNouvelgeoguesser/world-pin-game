@@ -4,6 +4,12 @@ const roundsData = [
     { "lat": 49.535156, "lng": -1.88275, "image": "assets/photo3.jpg" }, 
     { "lat": 48.6182, "lng": -2.0245, "image": "assets/photo4.jpeg" }, 
     { "lat": 30.8235, "lng": 111.0025, "image": "assets/photo5.jpeg" }
+    { "lat": 44.1659, "lng": 7.0654, "image": "assets/photo6.jpeg" }
+    { "lat": 22.4913, "lng": 114.0331, "image": "assets/photo7.jpeg" }
+    { "lat": 51.5383, "lng": -67.9406, "image": "assets/photo8.jpg" }
+    { "lat": 49.4688, "lng": 3.6991, "image": "assets/photo9.jpg" }
+    { "lat": 46.0518, "lng": 14.5051, "image": "assets/photo10.jpg" }
+
 ];
 
 let map, currentRound = 0, totalScore = 0;
@@ -91,11 +97,11 @@ function validateGuess() {
         
         // --- NOUVEAUX PALIERS DE SCORE ---
         let pts = 0;
-        if (dist < 50) { pts = 50; }
-        else if (dist < 100) { pts = 40; }
-        else if (dist < 500) { pts = 30; }   
+        if (dist < 50) { pts = 40; }
+        else if (dist < 100) { pts = 30; }
+        else if (dist < 500) { pts = 20; }   
         else if (dist < 1500) { pts = 15; }
-        else if (dist < 3000) { pts = 5; }
+        else if (dist < 3000) { pts = 10; }
         else { pts = 0; }
         
         totalScore += pts;
